@@ -35,13 +35,14 @@
             </ul>
 
         </nav>
-        <div>
+        <div class="header-left">
+            <button type="button" class="button" onclick="contact()">Contact</button>
             <a href="#" class="btn-menu"><i class="fa fa-bars"></i></a>
         </div>
     </header>
     <article class="about-me">
         <section class="board-info">
-            <div class="avatar">
+            <div class="avatar" onclick="showText('Bạn đã nhấp vào ảnh đại diện!')">
                 <img src="./img/avatar.webp" alt="Avatar" class="avatar__img">
             </div>
             <div class=" personal-info">
@@ -76,12 +77,25 @@
                 </div>
             </div>
         </section>
+        <section class="contact-form">
+            <h4>Enter your info for contact</h4>
+            <div>
+                <h5>Email</h5>
+                <input type="text" placeholder="type your email..." class="input" id="email">
+            </div>
+            <div>
+                <h5>Phone number</h5>
+                <input type="text" placeholder="type your phone number..." class="input" id="phoneNumber">
+            </div>
+            <button type="submit" class="button"
+                onclick="submit(document.getElementById('email').value,document.getElementById('phoneNumber').value)">submit</button>
+        </section>
     </article>
     <footer>
         <h3>HTML training</h3>
         <p> © Copyright (2023) </p>
     </footer>
-    <script type="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
