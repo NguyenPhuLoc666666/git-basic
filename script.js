@@ -31,7 +31,9 @@ function ValidateEmail(email) {
 
 function ValidatePhoneNumber(phoneNumber) {
   var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-  if (phoneNumber.match(phoneno)) {
+  var phoneNoNational =
+    /^\+?([0-9]{2})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3})[-. ]?([0-9]{3})$/;
+  if (phoneNumber.match(phoneno) || phoneNumber.match(phoneNoNational)) {
     return true;
   } else {
     alert("Bạn nhập sai định dạng số điện thoại!");
