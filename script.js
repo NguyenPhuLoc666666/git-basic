@@ -3,22 +3,35 @@ function showText(msg) {
 }
 
 const boardInfo = document.querySelector(".board-info");
-const contactForm = document.querySelector(".contact-form");
+const form = document.querySelector(".form");
+let contactForm = document.querySelector("#contact-form");
 
-function contact() {
+function handleContactBtn() {
   boardInfo.style.display = "none";
-  contactForm.style.display = "flex";
+  form.style.display = "flex";
+  let email = $("email").value;
+  let phoneNumber = $("phoneNumber").value;
+  alert(
+    "Thông tin bạn vừa nhập là:\n\nEmail: " +
+      email +
+      "\nSố điện thoại: " +
+      phoneNumber
+  );
 }
 
-function submit(email, phoneNumber) {
-  if (ValidateEmail(email) && ValidatePhoneNumber(phoneNumber)) {
-    alert(
-      "Thông tin bạn vừa nhập là:\n\nEmail: " +
-        email +
-        "\nSố điện thoại: " +
-        phoneNumber
-    );
-  }
+function handleSubmitBtn() {
+  let email = document.getElementById("email").value; //$("email").value;
+  let phoneNumber = document.getElementById("phoneNumber").value; //$("phoneNumber").value;
+  if (email != "" && phoneNumber != "") {
+    if (ValidateEmail(email) && ValidatePhoneNumber(phoneNumber)) {
+      alert(
+        "Thông tin bạn vừa nhập là:\n\nEmail: " +
+          email +
+          "\nSố điện thoại: " +
+          phoneNumber
+      );
+    }
+  } else alert("Vui lòng nhập đầy đủ thông tin");
 }
 
 function ValidateEmail(email) {

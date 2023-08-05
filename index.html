@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giới thiệu bản thân</title>
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -18,25 +19,25 @@
                 <li class="menu-item"><a href="#">Trang chủ</a></li>
                 <li class="menu-item"><a href="#">Bài học trong tuần</a>
                     <ul class="sub-menu">
-                        <li><a href="#">Tuần 1</a> </li>
-                        <li><a href="#">Tuần 2</a> </li>
-                        <li><a href="#">Tuần 3</a> </li>
-                        <li><a href="#">Tuần 4</a> </li>
+                        <li><a href="#" class="sub-menu-item">Tuần 1</a></li>
+                        <li><a href="#" class="sub-menu-item">Tuần 2</a></li>
+                        <li><a href="#" class="sub-menu-item">Tuần 3</a></li>
+                        <li><a href="#" class="sub-menu-item">Tuần 4</a></li>
                     </ul>
                 </li>
                 <li class="menu-item"><a href="#">Dự án cá nhân</a>
                     <ul class="sub-menu">
-                        <li><a href="#">Project 1</a> </li>
-                        <li><a href="#">Project 2</a> </li>
-                        <li><a href="#">Project 3</a> </li>
-                        <li><a href="#">Project 4</a> </li>
+                        <li><a href="#" class="sub-menu-item">Project 1</a></li>
+                        <li><a href="#" class="sub-menu-item">Project 2</a></li>
+                        <li><a href="#" class="sub-menu-item">Project 3</a></li>
+                        <li><a href="#" class="sub-menu-item">Project 4</a></li>
                     </ul>
                 </li>
             </ul>
 
         </nav>
         <div class="header-left">
-            <button type="button" class="button" onclick="contact()">Contact</button>
+            <button type="button" class="button" id="btn-contact" onclick="handleContactBtn()">Contact</button>
             <a href="#" class="btn-menu"><i class="fa fa-bars"></i></a>
         </div>
     </header>
@@ -79,18 +80,22 @@
                 </div>
             </div>
         </section>
-        <section class="contact-form">
-            <h4>Enter your info for contact</h4>
-            <div>
-                <h5>Email</h5>
-                <input type="text" placeholder="type your email..." class="input" id="email">
-            </div>
-            <div>
-                <h5>Phone number</h5>
-                <input type="text" placeholder="type your phone number..." class="input" id="phoneNumber">
-            </div>
-            <button type="submit" class="button"
-                onclick="submit(document.getElementById('email').value,document.getElementById('phoneNumber').value)">submit</button>
+        <section>
+            <form class="form" id="contact-form" action="">
+                <h4>Enter your info for contact</h4>
+                <div>
+                    <h5>Email</h5>
+                    <input type="text" placeholder="type your email..." class="input" id="email">
+                </div>
+                <div>
+                    <h5>Phone number</h5>
+                    <input type="text" placeholder="type your phone number..." class="input" id="phoneNumber">
+                </div>
+                <button type="button" class="button" id="btn-submit" onclick="handleSubmitBtn()">
+                    Submit
+                </button>
+            </form>
+
         </section>
     </article>
     <footer>
