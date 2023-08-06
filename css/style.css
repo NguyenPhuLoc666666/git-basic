@@ -78,8 +78,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-self: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 .personal-info {
   width: 59%;
@@ -176,7 +175,7 @@ h2 {
   border: 1px;
   border-color: #fff;
   text-align: center;
-  padding: 8px 8px 8px 8px;
+  padding: 8px;
   cursor: pointer;
 }
 
@@ -189,7 +188,7 @@ h2 {
   align-items: center;
   background-color: var(--green-l);
   border-radius: 25px;
-  padding-top: 24px;
+  padding: 24px;
 }
 
 .form .input {
