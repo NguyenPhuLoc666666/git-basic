@@ -1,0 +1,116 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="#">
+            LOGO
+        </a>
+        <nav>
+            <ul class="menu">
+                <li class="menu-item"><a href="#">Trang chủ</a></li>
+                <li class="menu-item"><a href="#">Bài học trong tuần</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="sub-menu-item">Tuần 1</a></li>
+                        <li><a href="#" class="sub-menu-item">Tuần 2</a></li>
+                        <li><a href="#" class="sub-menu-item">Tuần 3</a></li>
+                        <li><a href="#" class="sub-menu-item">Tuần 4</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Dự án cá nhân</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="sub-menu-item">Project 1</a></li>
+                        <li><a href="#" class="sub-menu-item">Project 2</a></li>
+                        <li><a href="#" class="sub-menu-item">Project 3</a></li>
+                        <li><a href="#" class="sub-menu-item">Project 4</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+        <div class="header-left">
+            <button type="button" class="button" id="btn-contact" onclick="handleContactBtn()">Contact</button>
+            <button type="button" class="button" id="btn-contact">nhi.sg</button>
+            <button type="button" class="button" id="btn-contact">todolist</button>
+            <a href="#" class="btn-menu"><i class="fa fa-bars"></i></a>
+        </div>
+    </header>
+    <article class="about-me">
+        <section class="board-info">
+            <div class="avatar" onclick="showText('Bạn đã nhấp vào ảnh đại diện!')">
+                <img src="./img/avatar.webp" alt="Avatar" class="avatar__img">
+            </div>
+            <div class=" personal-info">
+                <div>
+                    <h2>NGUYỄN PHÚ LỘC</h2>
+                </div>
+                <div>
+                    <p>Tuổi: 22<br />
+                        Địa chỉ: Tây Ninh<br />
+                        Mình tham gia NhiLe team vào tháng 10, 2022.<br />
+                        Hiện tại mình đang hoạt động ở team Youtube Nhi Le.<br /></p>
+                </div>
+                <div>
+                    <h3>Liên hệ</h3>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.facebook.com/locnp0901/" target="_blank"><i
+                                class="fa fa-facebook"></i></a>
+                        <a class="social-icon" href="https://www.linkedin.com/in/ngphuloc0901/" target="_blank"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a class="social-icon" href="https://github.com/NguyenPhuLoc666666" target="_blank"><i
+                                class="fa fa-github"></i></a>
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <div>
+                    <h3>Sở thích</h3>
+                    <p>
+                        Cờ vua, nghe nhạc, tiếng anh
+                    </p>
+                </div>
+                <div>
+                    <h3>Kỹ năng</h3>
+                    <ul style="list-style-type: none;">
+                        <li>Fontend: HTML, CSS, JS</li>
+                        <li>Backend: Java</li>
+                        <li>Database: mySQL, postgreSQL</li>
+                        <li>Tiếng anh: B1</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <form class="form" id="contact-form" action="">
+                <h4>Enter your info for contact</h4>
+                <div>
+                    <h5>Email</h5>
+                    <input type="text" placeholder="type your email..." class="input" id="email">
+                </div>
+                <div>
+                    <h5>Phone number</h5>
+                    <input type="text" placeholder="type your phone number..." class="input" id="phoneNumber">
+                </div>
+                <button type="button" class="button" id="btn-submit" onclick="handleSubmitBtn()">
+                    Submit
+                </button>
+            </form>
+
+        </section>
+    </article>
+    <footer>
+        <h3>HTML training</h3>
+        <p> © Copyright (2023) </p>
+    </footer>
+    <script src="./script.js"></script>
+    <script src="jquery-3.6.4.min.js"></script>
+</body>
+
+</html>
